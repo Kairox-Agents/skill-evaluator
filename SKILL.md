@@ -8,7 +8,7 @@ description: >
   assessing whether a skill contains real domain expertise. Do NOT use for
   evaluating agent runtime behavior (use skillgrade) or deep security
   scanning (use Snyk Agent Scan).
-version: 2.0.0
+version: 2.1.0
 license: MIT
 metadata:
   domain: meta-skills
@@ -321,5 +321,6 @@ See `references/existing-tools.md` for how we complement the ecosystem.
 - `references/slop-examples.md` — scored before/after examples at each tier
 - `references/tier-1-benchmarks.md` — Tier 1 calibration anchors
 - `references/existing-tools.md` — ecosystem map
+- `references/eval-methodology.md` — runtime eval patterns (Phil Schmid, LangChain, Anthropic)
 - `references/article.md` — the story behind this skill
 - `examples/` — sample evaluations

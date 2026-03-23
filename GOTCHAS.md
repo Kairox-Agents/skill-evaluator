@@ -96,4 +96,14 @@
 
 ---
 
-*Last updated: 2026-03-22 | Accumulated from analysis of 100+ skills across SkillsMP, ClaWHub, skills.sh, and agency-agents*
+### 🤖 Ignoring that skills often don't trigger
+
+**What Claude/GPT typically does:** Evaluates a skill's content quality and assumes it will work if the content is good.
+
+**What's actually true:** LangChain found that Claude Code sometimes never invokes a skill even when it should. On one task, the "langchain agents" skill was never triggered. Prompting to invoke skills only brought invocation rate to 70%. Phil Schmid found that rewriting the skill description (the trigger) fixed 5 of 7 failures — more than any content change.
+
+**Implication for evaluation:** A skill with perfect content but a vague description ("Help with marketing tasks") will never trigger. Weight description quality heavily in the format check. A trigger-optimized description with negative triggers ("Use when creating LinkedIn posts for B2B audiences. Do NOT use for Instagram, TikTok, or B2C content") is more valuable than an extra 100 lines of instructions.
+
+---
+
+*Last updated: 2026-03-23 | Accumulated from analysis of 100+ skills across SkillsMP, ClaWHub, skills.sh, agency-agents + runtime eval research from Phil Schmid, LangChain, Anthropic*
